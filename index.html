@@ -7,12 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f0f4f9;--surface:#f7f9fc;--card:#fff;--border:#dce5ef;--border-light:#e8eff6;--border-hover:#c0d2e4;--blue:#2b7de9;--blue-dark:#1a5fc0;--blue-deeper:#0f2b4a;--blue-light:#5ba3f5;--blue-bg:#deeafa;--blue-bg-hover:#eaf1f9;--text:#0f2b4a;--text-mid:#3a5f80;--text-sec:#5a7d9e;--text-muted:#7a9bb8;--text-hint:#9cb8d2;--green:#3a9e5c;--green-bg:#e0f5e8;--green-dark:#1d7a3a;--green-remark:#f2faf5;--amber:#e0a030;--amber-bg:#fef0d6;--amber-dark:#8a6520;--amber-remark:#fefaf0;--red-bg:#fce8e8;--red:#a03030;--font:'DM Sans',sans-serif;--mono:'JetBrains Mono',monospace}
+:root{--bg:#f0f4f9;--surface:#f7f9fc;--card:#fff;--border:#dce5ef;--border-light:#e8eff6;--border-hover:#c0d2e4;--blue:#2b7de9;--blue-dark:#1a5fc0;--blue-deeper:#0f2b4a;--blue-light:#5ba3f5;--blue-bg:#deeafa;--blue-bg-hover:#eaf1f9;--text:#0f2b4a;--text-mid:#3a5f80;--text-sec:#5a7d9e;--text-muted:#7a9bb8;--text-hint:#9cb8d2;--green:#3a9e5c;--green-bg:#e0f5e8;--green-dark:#1d7a3a;--green-remark:#f2faf5;--amber:#e0a030;--amber-bg:#fef0d6;--amber-dark:#8a6520;--amber-remark:#fefaf0;--red-bg:#fce8e8;--red:#a03030;--teal-bg:#d6f0f2;--teal:#1a7a85;--purple-bg:#e6e2f8;--purple:#5a4ca8;--font:'DM Sans',sans-serif;--mono:'JetBrains Mono',monospace}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh}
 
-/* LOCK SCREEN — full viewport */
+/* LOCK SCREEN */
 .lock-screen{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 32px;background:linear-gradient(180deg,#e8f0fa 0%,var(--bg) 100%)}
 .lock-icon{width:64px;height:64px;border-radius:50%;background:var(--blue-bg);display:flex;align-items:center;justify-content:center;margin-bottom:28px}
 .lock-icon svg{width:28px;height:28px}
@@ -28,9 +28,9 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .pw-hint{font-size:12px;color:var(--text-hint)}.pw-error{font-size:12px;color:var(--red);margin-top:6px;display:none}
 .lock-screen.hide{display:none}
 
-/* MAIN — full width */
+/* MAIN */
 .main{display:none}.main.show{display:block}
-.topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:18px 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);background:rgba(247,249,252,.9)}
+.topbar{border-bottom:1px solid var(--border);padding:18px 0;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px);background:rgba(247,249,252,.9)}
 .topbar-inner{max-width:1100px;margin:0 auto;padding:0 40px;display:flex;justify-content:space-between;align-items:center}
 .topbar-left{display:flex;align-items:center;gap:14px}
 .topbar .accent-bar{width:30px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--blue),var(--blue-light))}
@@ -39,17 +39,16 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .live-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
-/* NAV — full width bar */
-.nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0}
+/* NAV */
+.nav{background:var(--surface);border-bottom:1px solid var(--border)}
 .nav-inner{max-width:1100px;margin:0 auto;padding:0 40px;display:flex;gap:0}
 .nav-tab{padding:14px 28px;font-size:14px;font-weight:500;color:var(--text-muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s;user-select:none}
 .nav-tab:hover{color:var(--blue)}.nav-tab.active{color:var(--blue);border-bottom-color:var(--blue)}
 
-/* CONTENT — centered with max-width */
 .page{display:none;max-width:1100px;margin:0 auto;padding:36px 40px 48px}.page.show{display:block}
 
 /* STATS */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:36px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:32px}
 .stat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 22px;transition:border-color .15s}
 .stat:hover{border-color:var(--border-hover)}
 .stat .label{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
@@ -59,6 +58,19 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .section{margin-bottom:40px}
 .sec-title{font-size:13px;font-weight:500;color:var(--blue);margin-bottom:18px;display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.6px}
 .sec-title::before{content:"";width:16px;height:2px;border-radius:1px;background:var(--blue)}
+.sec-title .sec-note{font-weight:400;text-transform:none;letter-spacing:0;color:var(--text-hint);font-size:12px}
+
+/* FUNNEL */
+.funnel{display:flex;gap:6px;margin-bottom:24px}
+.fstage{flex:1;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 8px 10px;text-align:center;cursor:pointer;transition:all .15s;position:relative;user-select:none}
+.fstage:hover{border-color:var(--border-hover);transform:translateY(-1px)}
+.fstage.sel{border-color:var(--blue);box-shadow:0 0 0 2px rgba(43,125,233,.15)}
+.fstage .fcount{font-size:22px;font-weight:600;letter-spacing:-.5px;font-family:var(--mono)}
+.fstage .fname{font-size:9.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--text-muted);margin-top:3px;line-height:1.3}
+.fstage.zero .fcount{color:var(--text-hint)}
+.fstage:not(:last-child)::after{content:"›";position:absolute;right:-7px;top:50%;transform:translateY(-50%);color:var(--text-hint);font-size:13px;z-index:2}
+.fstage .fbar{height:3px;border-radius:2px;margin-top:8px;background:var(--border-light)}
+.fstage .fbar div{height:3px;border-radius:2px}
 
 /* FILTER TABS */
 .tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
@@ -68,27 +80,47 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .tab .cnt{font-size:10px;padding:2px 7px;border-radius:10px;font-weight:500;background:rgba(0,0,0,.06)}.tab.active .cnt{background:rgba(255,255,255,.25)}
 
 /* PIPELINE TABLE */
-.pipe-hdr{display:grid;grid-template-columns:2.4fr 1fr .8fr .7fr 32px;padding:10px 18px;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--text-muted)}
+.pipe-hdr{display:grid;grid-template-columns:1.9fr .8fr .6fr .6fr .55fr .5fr .5fr .95fr 26px 26px;padding:10px 18px;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--text-muted)}
 .target{transition:all .2s}.target.hidden{display:none}
-.pipe-row{display:grid;grid-template-columns:2.4fr 1fr .8fr .7fr 32px;padding:14px 18px;font-size:13px;border-bottom:1px solid var(--border-light);align-items:center;cursor:pointer;transition:all .15s;border-radius:10px;margin-bottom:2px}
+.pipe-row{display:grid;grid-template-columns:1.9fr .8fr .6fr .6fr .55fr .5fr .5fr .95fr 26px 26px;padding:14px 18px;font-size:13px;border-bottom:1px solid var(--border-light);align-items:center;cursor:pointer;transition:all .15s;border-radius:10px;margin-bottom:2px}
 .pipe-row:hover{background:var(--blue-bg-hover)}
 .pipe-row.open{background:var(--blue-bg-hover);border-radius:10px 10px 0 0;border-bottom-color:transparent}
 .nm{font-weight:500;color:var(--text);font-size:14px}.tp{font-size:11px;color:var(--text-muted);margin-top:3px}
 .eb{font-family:var(--mono);color:var(--blue);font-weight:500;font-size:14px}.ind{color:var(--text-sec);font-size:12px}
-.badge{font-size:11px;padding:4px 12px;border-radius:14px;font-weight:500}
-.badge-active{background:var(--blue-bg);color:var(--blue-dark)}.badge-explore{background:#fef3d6;color:#a07730}
-.badge-parked{background:#e8edf2;color:var(--text-muted)}.badge-disqualified{background:var(--red-bg);color:var(--red)}
+.rev{font-family:var(--mono);color:var(--text-mid);font-size:13px}
+.cagrv{font-family:var(--mono);color:var(--text-sec);font-size:12px}
+.score{font-family:var(--mono);font-size:12px;color:var(--text-sec)}
+.fy{font-size:10px;font-weight:600;padding:3px 8px;border-radius:10px;font-family:var(--mono);justify-self:start}
+.fy-25{background:var(--green-bg);color:var(--green-dark)}
+.fy-old{background:#e8edf2;color:var(--text-muted)}
+.badge{font-size:11px;padding:4px 12px;border-radius:14px;font-weight:500;white-space:nowrap;justify-self:start}
+.bg-identified{background:#e8edf2;color:var(--text-sec)}
+.bg-analyzed{background:var(--blue-bg);color:var(--blue-dark)}
+.bg-contacted{background:var(--teal-bg);color:var(--teal)}
+.bg-dialogue{background:var(--green-bg);color:var(--green-dark)}
+.bg-nda{background:var(--purple-bg);color:var(--purple)}
+.bg-loi{background:var(--amber-bg);color:var(--amber-dark)}
+.bg-dd{background:var(--blue-deeper);color:#fff}
+.bg-parked{background:#e8edf2;color:var(--text-muted)}
+.bg-passed{background:var(--red-bg);color:var(--red)}
+.deck{display:flex;align-items:center;justify-content:center}
+.deck svg{width:15px;height:15px}
 .chevron{font-size:16px;color:var(--text-muted);transition:transform .2s;display:flex;align-items:center;justify-content:center}
 .pipe-row.open .chevron{transform:rotate(180deg);color:var(--blue)}
 
-/* DETAIL ACCORDION */
+/* DETAIL */
 .detail{display:none;background:var(--card);border:1px solid var(--border);border-top:none;border-radius:0 0 14px 14px;padding:24px;margin-bottom:8px}
 .detail.show{display:block}
-.yr-row{display:grid;grid-template-columns:.7fr 1fr 1fr 1fr 1fr;padding:8px 0;font-size:13px;border-bottom:1px solid #edf2f7;align-items:center}
+.meta-strip{display:flex;flex-wrap:wrap;gap:8px 22px;padding:0 0 16px;border-bottom:1px solid var(--border-light);margin-bottom:14px}
+.meta-item{font-size:12px;color:var(--text-sec)}
+.meta-item b{color:var(--text);font-weight:500;font-family:var(--mono);font-size:12px}
+.next-step{margin-top:2px;padding:10px 14px;background:var(--blue-bg-hover);border-left:3px solid var(--blue);border-radius:8px;font-size:12px;color:var(--text-mid);margin-bottom:14px}
+.next-step b{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--blue-dark);display:block;margin-bottom:3px}
+.yr-row{display:grid;padding:8px 0;font-size:13px;border-bottom:1px solid #edf2f7;align-items:center}
 .yr-row.hd{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.4px;border-bottom-color:var(--border)}
-.metric{color:var(--text-sec);font-size:13px}.val{font-family:var(--mono);color:var(--text);font-size:13px;text-align:right}.val.hi{color:var(--blue);font-weight:500}
+.metric{color:var(--text-sec);font-size:13px}.val{font-family:var(--mono);color:var(--text);font-size:13px;text-align:right}.val.hi{color:var(--blue);font-weight:500}.val.cagr{color:var(--text-muted)}
 .chart-label{font-size:11px;color:var(--text-muted);margin-top:24px;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
-.mini-chart{display:flex;align-items:flex-end;gap:8px;height:56px;margin-top:4px}
+.mini-chart{display:flex;align-items:flex-end;gap:8px;height:56px;margin-top:4px;margin-bottom:14px}
 .mini-chart .col{flex:1;border-radius:5px 5px 0 0;background:var(--border);position:relative;transition:background .15s;min-width:0}
 .mini-chart .col:hover{background:var(--border-hover)}.mini-chart .col.lat{background:var(--blue)}
 .mini-chart .col .cl{position:absolute;bottom:-17px;left:50%;transform:translateX(-50%);font-size:10px;color:var(--text-muted)}
@@ -104,7 +136,32 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .rtag-thesis{background:var(--blue-bg);color:var(--blue-dark)}.rtag-signal{background:var(--green-bg);color:var(--green-dark)}
 .rtag-risk{background:var(--amber-bg);color:var(--amber-dark)}.rtag-note{background:#edf2f7;color:var(--text-sec)}
 
-/* INDUSTRY CARDS */
+/* ARCHIVE */
+.archive-toggle{display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;padding:14px 18px;background:var(--card);border:1px solid var(--border);border-radius:12px;font-size:13px;font-weight:500;color:var(--text-sec);transition:all .15s}
+.archive-toggle:hover{border-color:var(--border-hover)}
+.archive-toggle .arr{transition:transform .2s;color:var(--text-muted)}
+.archive-toggle.open .arr{transform:rotate(90deg)}
+.archive-body{display:none;margin-top:10px}
+.archive-body.show{display:block}
+.archive-body .pipe-row{opacity:.75}
+.archive-body .pipe-row:hover,.archive-body .pipe-row.open{opacity:1}
+
+/* AGENDA */
+.ag-list{display:flex;flex-direction:column;gap:8px}
+.ag-item{display:grid;grid-template-columns:92px 1fr auto;gap:16px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 18px;transition:border-color .15s}
+.ag-item:hover{border-color:var(--border-hover)}
+.ag-date{font-family:var(--mono);font-size:12px;color:var(--text-sec)}
+.ag-date .dow{display:block;font-size:10px;color:var(--text-hint);text-transform:uppercase;letter-spacing:.5px;font-family:var(--font)}
+.ag-title{font-size:13px;font-weight:500;color:var(--text)}
+.ag-sub{font-size:11px;color:var(--text-muted);margin-top:2px}
+.ag-chip{font-size:10px;font-weight:500;padding:3px 10px;border-radius:10px}
+.chip-meeting{background:var(--blue-bg);color:var(--blue-dark)}
+.chip-task{background:var(--amber-bg);color:var(--amber-dark)}
+.chip-overdue{background:var(--red-bg);color:var(--red)}
+.ag-right{display:flex;gap:6px;align-items:center}
+.ag-empty{font-size:13px;color:var(--text-hint);padding:18px;text-align:center;background:var(--card);border:1px dashed var(--border);border-radius:12px}
+
+/* INDUSTRY */
 .ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .ind-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px 18px;transition:border-color .15s}
 .ind-card:hover{border-color:var(--border-hover)}
@@ -136,26 +193,25 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .insight .il{font-size:10px;font-weight:500;color:var(--blue-dark);margin-bottom:5px}
 .insight.positive .il{color:var(--green-dark)}.insight.caution .il{color:var(--amber-dark)}
 
-/* FOOTER */
 .foot{max-width:1100px;margin:0 auto;text-align:center;font-size:11px;color:var(--text-hint);padding:20px 40px 36px;border-top:1px solid var(--border)}
-
-/* LOADING */
 .chart-frame{margin:16px -30px 0;min-height:500px}
 .loading{text-align:center;padding:48px;color:var(--text-muted);font-size:14px}
 .loading::after{content:"";display:inline-block;width:18px;height:18px;border:2px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin .6s linear infinite;margin-left:10px;vertical-align:middle}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* RESPONSIVE */
 @media(max-width:768px){
   .topbar-inner,.nav-inner,.page,.foot{padding-left:20px;padding-right:20px}
   .stats{grid-template-columns:repeat(2,1fr)}
-  .pipe-hdr,.pipe-row{grid-template-columns:2fr .8fr 28px}
-  .pipe-hdr span:nth-child(2),.pipe-hdr span:nth-child(4),.pipe-row .ind,.pipe-row .badge{display:none}
+  .funnel{flex-wrap:wrap}.fstage{min-width:90px}
+  .pipe-hdr,.pipe-row{grid-template-columns:2fr .6fr .9fr 28px}
+  .pipe-hdr span:nth-child(2),.pipe-hdr span:nth-child(3),.pipe-hdr span:nth-child(4),.pipe-hdr span:nth-child(5),.pipe-hdr span:nth-child(7),.pipe-hdr span:nth-child(9),.pipe-row .ind,.pipe-row .rev,.pipe-row .eb,.pipe-row .cagrv,.pipe-row .score,.pipe-row .deck{display:none}
   .ind-grid{grid-template-columns:1fr 1fr}
   .insight-row{flex-direction:column}
-  .nav-tab{padding:12px 18px;font-size:13px}
+  .nav-tab{padding:12px 16px;font-size:13px}
   .lock-screen h1{font-size:26px}
   .stat .value{font-size:22px}
+  .ag-item{grid-template-columns:72px 1fr;grid-auto-rows:auto}
+  .ag-right{grid-column:2}
 }
 @media(max-width:480px){
   .stats{grid-template-columns:1fr 1fr}.ind-grid{grid-template-columns:1fr}
@@ -177,19 +233,46 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 
 <div class="main" id="mainApp">
 <div class="topbar"><div class="topbar-inner"><div class="topbar-left"><div class="accent-bar"></div><div class="site-title">Ingo's Search Fund</div></div><div class="live-badge"><div class="live-dot"></div>Live sync</div></div></div>
-<nav class="nav"><div class="nav-inner"><div class="nav-tab active" onclick="showPage('pipeline',this)">Pipeline</div><div class="nav-tab" onclick="showPage('macro',this)">Macro outlook</div></div></nav>
+<nav class="nav"><div class="nav-inner">
+<div class="nav-tab active" onclick="showPage('pipeline',this)">Pipeline</div>
+<div class="nav-tab" onclick="showPage('agenda',this)">Agenda</div>
+<div class="nav-tab" onclick="showPage('macro',this)">Macro outlook</div>
+</div></nav>
 
+<!-- ============ PIPELINE PAGE ============ -->
 <div class="page show" id="page-pipeline">
 <div class="stats" id="statsBar"><div class="loading">Loading</div></div>
-<div class="section"><div class="sec-title">Acquisition pipeline</div><div class="tabs" id="filterTabs"></div>
-<div class="pipe-hdr"><span>Company</span><span>Industry</span><span>EBITDA</span><span>Status</span><span></span></div>
-<div id="pipelineList"><div class="loading">Loading pipeline</div></div></div>
+
+<div class="section">
+<div class="sec-title">Search funnel <span class="sec-note">— click a stage to filter</span></div>
+<div class="funnel" id="funnelBar"></div>
+<div class="tabs" id="filterTabs"></div>
+<div class="pipe-hdr"><span>Company</span><span>Industry</span><span>Revenue</span><span>EBITDA</span><span title="Revenue CAGR over available years">CAGR</span><span>FY</span><span>Score</span><span>Stage</span><span></span><span></span></div>
+<div id="pipelineList"><div class="loading">Loading pipeline</div></div>
+</div>
+
+<div class="section">
+<div class="sec-title">Archive <span class="sec-note">— parked &amp; passed, kept for reference</span></div>
+<div class="archive-toggle" id="archiveToggle" onclick="toggleArchive()"><span class="arr">›</span><span id="archiveLabel">Show archived companies</span></div>
+<div class="archive-body" id="archiveBody"></div>
+</div>
+
 <div class="section"><div class="sec-title">Industry screening</div><div class="ind-grid" id="industryGrid"><div class="loading">Loading</div></div></div>
+
 <div class="section"><div class="sec-title">About this search</div>
 <div class="about-card"><h3>Investment criteria</h3><p>Targeting Icelandic SMEs with ISK 150–300M EBITDA, aging owner-operators, and defensible market positions. Focused on businesses with physical service delivery, recurring revenue characteristics, and clear succession opportunities.</p>
 <div class="criteria"><span class="crit">ISK 150–300M EBITDA</span><span class="crit">Owner age 55+</span><span class="crit">AI-resilient</span><span class="crit">Low capex</span><span class="crit">30%+ IRR target</span><span class="crit">Fragmented market</span></div></div></div>
 </div>
 
+<!-- ============ AGENDA PAGE ============ -->
+<div class="page" id="page-agenda">
+<div class="stats" id="agStats"><div class="loading">Loading</div></div>
+<div class="section"><div class="sec-title">Upcoming meetings</div><div class="ag-list" id="agMeetings"><div class="loading">Loading</div></div></div>
+<div class="section"><div class="sec-title">Open tasks</div><div class="ag-list" id="agTasks"><div class="loading">Loading</div></div></div>
+<div class="section"><div class="sec-title">Recently completed</div><div class="ag-list" id="agDone"></div></div>
+</div>
+
+<!-- ============ MACRO PAGE ============ -->
 <div class="page" id="page-macro">
 <div class="stats">
 <div class="stat"><div class="label">Hagvöxtur '26</div><div class="value">0.6%</div><div class="delta">Greining Íslandsbanka</div></div>
@@ -222,61 +305,263 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 
 <div class="section">
 <div class="sec-title">Rauntímagögn — Hagstofa Íslands</div>
-
 <div class="macro-card">
 <h3>Atvinnuleysi eftir mánuðum og kyni</h3>
 <div class="src">Hagstofa Íslands · Uppfærist sjálfkrafa</div>
 <div class="chart-frame"><iframe title="Atvinnuleysi eftir mánuðum og kyni" aria-label="Line chart" id="datawrapper-chart-nnRye" src="https://datawrapper.dwcdn.net/nnRye/16/" scrolling="no" frameborder="0" style="width:100%;min-width:100%!important;border:none" height="501" data-external="1"></iframe></div>
 </div>
-
 <div class="macro-card">
 <h3>Heildartekjur helstu atvinnugreina</h3>
 <div class="src">Hagstofa Íslands · Uppfærist sjálfkrafa</div>
 <div class="chart-frame"><iframe title="Heildartekjur helstu atvinnugreina" aria-label="Table" id="datawrapper-chart-j97zT" src="https://datawrapper.dwcdn.net/j97zT/5/" scrolling="no" frameborder="0" style="width:100%;min-width:100%!important;border:none" height="611" data-external="1"></iframe></div>
 </div>
-
 <div class="macro-card">
 <h3>Hagvöxtur — Breyting (%) og spá til 2028</h3>
 <div class="src">Hagstofa Íslands · Uppfærist sjálfkrafa</div>
 <div class="chart-frame"><iframe title="Hagvöxtur spá" aria-label="Column Chart" src="https://datawrapper.dwcdn.net/CuMrj/5/" scrolling="no" frameborder="0" style="width:100%;min-width:100%!important;border:none" height="560" data-external="1"></iframe></div>
 </div>
-
 <div class="macro-card">
 <h3>Fjármunamyndun atvinnuvega (valdir liðir)</h3>
 <div class="src">Hagstofa Íslands · Uppfærist sjálfkrafa</div>
 <div class="chart-frame"><iframe title="Fjármunamyndun atvinnuvega (valdir liðir)" aria-label="Table" id="datawrapper-chart-xFQO0" src="https://datawrapper.dwcdn.net/xFQO0/11/" scrolling="no" frameborder="0" style="width:100%;min-width:100%!important;border:none" height="871" data-external="1"></iframe></div>
 </div>
+</div>
+</div>
 
-</div>
-</div>
 <div class="foot">Password-protected · Data syncs live from Google Sheets · GitHub Pages</div>
 </div>
 
 <script>
 const SHEET_ID='1vij0YzymxON9NuQZ4VWFwlF1ehj1ojDQuCesceVGd2k';
 const SITE_PASSWORD='ingo2026';
+
+/* ---- Stage model ---- */
+const STAGES=[
+ {key:'identified',label:'Identified',cls:'bg-identified',color:'#7a9bb8'},
+ {key:'analyzed',label:'Analyzed',cls:'bg-analyzed',color:'#2b7de9'},
+ {key:'contacted',label:'Contacted',cls:'bg-contacted',color:'#1a7a85'},
+ {key:'dialogue',label:'In Dialogue',cls:'bg-dialogue',color:'#3a9e5c'},
+ {key:'nda',label:'NDA / Materials',cls:'bg-nda',color:'#5a4ca8'},
+ {key:'loi',label:'IOI / LOI',cls:'bg-loi',color:'#e0a030'},
+ {key:'dd',label:'Due Diligence',cls:'bg-dd',color:'#0f2b4a'}
+];
+const ARCHIVE_STAGES=[
+ {key:'parked',label:'Parked',cls:'bg-parked'},
+ {key:'passed',label:'Passed',cls:'bg-passed'}
+];
+function normStage(s,statusFallback){
+ const v=(s||'').toLowerCase().replace(/[^a-zíðþæöáéúóý]/g,'');
+ if(v.includes('identif'))return'identified';
+ if(v.includes('analy'))return'analyzed';
+ if(v.includes('contact'))return'contacted';
+ if(v.includes('dialog'))return'dialogue';
+ if(v.includes('nda')||v.includes('material'))return'nda';
+ if(v.includes('ioi')||v.includes('loi'))return'loi';
+ if(v.includes('diligence')||v==='dd')return'dd';
+ if(v.includes('park')||v.includes('watch'))return'parked';
+ if(v.includes('pass')||v.includes('disqual'))return'passed';
+ // fallback from old Status column
+ const f=(statusFallback||'').toLowerCase();
+ if(f.includes('active'))return'analyzed';
+ if(f.includes('explore'))return'identified';
+ if(f.includes('park')||f.includes('watch'))return'parked';
+ if(f.includes('disqual'))return'passed';
+ return'identified';
+}
+function stageInfo(key){return STAGES.find(s=>s.key===key)||ARCHIVE_STAGES.find(s=>s.key===key)||STAGES[0]}
+function hasDeck(v){const x=(v||'').toString().trim().toLowerCase();return x==='yes'||x==='true'||x==='✓'||x==='x'||x==='já'||x==='y'||x==='1'}
+
+/* ---- Sheet fetch ---- */
 function csvUrl(tab){return`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(tab)}`}
 function parseCSV(t){const R=[];let r=[],c='',q=false;for(let i=0;i<t.length;i++){const ch=t[i];if(q){if(ch==='"'&&t[i+1]==='"'){c+='"';i++}else if(ch==='"'){q=false}else{c+=ch}}else{if(ch==='"'){q=true}else if(ch===','){r.push(c.trim());c=''}else if(ch==='\n'||(ch==='\r'&&t[i+1]==='\n')){r.push(c.trim());R.push(r);r=[];c='';if(ch==='\r')i++}else{c+=ch}}}if(c||r.length){r.push(c.trim());R.push(r)}return R}
 async function fetchTab(tab){try{const r=await fetch(csvUrl(tab));return parseCSV(await r.text())}catch(e){console.error(e);return[]}}
+
+/* ---- Shell ---- */
 function unlock(){if(document.getElementById('pwInput').value===SITE_PASSWORD){document.getElementById('lockScreen').classList.add('hide');document.getElementById('mainApp').classList.add('show');loadDashboard()}else{document.getElementById('pwError').style.display='block';document.getElementById('pwInput').value='';document.getElementById('pwInput').focus()}}
 function showPage(n,t){document.querySelectorAll('.nav-tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.page').forEach(x=>x.classList.remove('show'));t.classList.add('active');document.getElementById('page-'+n).classList.add('show');window.scrollTo(0,0)}
 function toggleDetail(row){const d=row.nextElementSibling;const o=d.classList.contains('show');document.querySelectorAll('.detail').forEach(x=>x.classList.remove('show'));document.querySelectorAll('.pipe-row').forEach(x=>x.classList.remove('open'));if(!o){d.classList.add('show');row.classList.add('open')}}
-function filterBy(s,t){document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');document.querySelectorAll('.detail').forEach(x=>x.classList.remove('show'));document.querySelectorAll('.pipe-row').forEach(x=>x.classList.remove('open'));document.querySelectorAll('.target').forEach(x=>{x.classList.toggle('hidden',s!=='all'&&x.dataset.status!==s)})}
-async function loadDashboard(){const[pipeline,financials,remarks,industries]=await Promise.all([fetchTab('Pipeline'),fetchTab('Financials'),fetchTab('Remarks'),fetchTab('Industry Screening')]);renderStats(pipeline);renderPipeline(pipeline,financials,remarks);renderIndustries(industries)}
-function renderStats(data){const rows=data.slice(1).filter(r=>r[0]);const active=rows.filter(r=>r[4]==='Active').length;const inds=new Set(rows.map(r=>r[2])).size;const es=rows.map(r=>parseFloat(r[3])).filter(n=>!isNaN(n));document.getElementById('statsBar').innerHTML=`<div class="stat"><div class="label">Pipeline</div><div class="value">${rows.length}</div><div class="delta">companies tracked</div></div><div class="stat"><div class="label">Industries</div><div class="value">${inds}</div><div class="delta">sectors explored</div></div><div class="stat"><div class="label">EBITDA range</div><div class="value">${Math.min(...es)}–${Math.max(...es)}M</div><div class="delta">ISK, across targets</div></div><div class="stat"><div class="label">Active targets</div><div class="value">${active}</div><div class="delta">under evaluation</div></div>`}
-function renderPipeline(data,finData,remData){
-const rows=data.slice(1).filter(r=>r[0]);const sc={};rows.forEach(r=>{const s=(r[4]||'').toLowerCase();sc[s]=(sc[s]||0)+1});
-document.getElementById('filterTabs').innerHTML=['all','active','explore','parked','disqualified'].map(s=>{const c=s==='all'?rows.length:(sc[s]||0);return c||s==='all'?`<div class="tab ${s==='all'?'active':''}" onclick="filterBy('${s}',this)">${s[0].toUpperCase()+s.slice(1)}<span class="cnt">${c}</span></div>`:''}).join('');
-const fl={};let cc='';finData.slice(1).forEach(r=>{if(r[0])cc=r[0];if(r[1]&&cc){if(!fl[cc])fl[cc]={};fl[cc][r[1]]=[r[2],r[3],r[4],r[5]]}});
-const rl={};remData.slice(1).forEach(r=>{if(r[0]){if(!rl[r[0]])rl[r[0]]=[];rl[r[0]].push({tag:r[1],text:r[2]})}});
-document.getElementById('pipelineList').innerHTML=rows.map(r=>{
-const nm=r[0],tp=r[1],ind=r[2],eb=r[3],st=(r[4]||'').toLowerCase();let dh='';
-const cf=fl[nm];if(cf){const m=Object.entries(cf);if(m.length){dh+=`<div class="yr-row hd"><span></span><span style="text-align:right">2021</span><span style="text-align:right">2022</span><span style="text-align:right">2023</span><span style="text-align:right">2024</span></div>`;m.forEach(([k,v])=>{dh+=`<div class="yr-row"><span class="metric">${k}</span>${v.map((x,j)=>`<span class="val${j===3?' hi':''}">${x||'—'}</span>`).join('')}</div>`});
-const er=cf['EBITDA (M ISK)'];if(er){const ns=er.map(v=>parseFloat(v)).filter(n=>!isNaN(n)&&n>0);if(ns.length>1){const mx=Math.max(...ns);dh+=`<div class="chart-label">EBITDA trend (M ISK)</div><div class="mini-chart">`;er.forEach((v,j)=>{const n=parseFloat(v);if(!isNaN(n)&&n>0){const h=Math.max(5,(n/mx)*100);const last=j===er.length-1||er.slice(j+1).every(x=>!parseFloat(x));dh+=`<div class="col${last?' lat':''}" style="height:${h}%"><div class="cv">${Math.round(n)}</div><div class="cl">${21+j}</div></div>`}});dh+=`</div>`}}}}
-const cr=rl[nm];if(cr&&cr.length){dh+=`<div class="remarks">`;cr.forEach(rm=>{const tl=(rm.tag||'note').toLowerCase();let rc='',tc='rtag-note';if(tl==='signal'){rc='green';tc='rtag-signal'}else if(tl==='thesis'){tc='rtag-thesis'}else if(['risk','gap','below target','too small','fail'].includes(tl)){rc='amber';tc='rtag-risk'}dh+=`<div class="remark ${rc}"><span class="rtag ${tc}">${rm.tag}</span>${rm.text}</div>`});dh+=`</div>`}
-if(!dh)dh='<div style="color:var(--text-hint);font-size:13px;padding:12px">No detailed data yet</div>';
-return`<div class="target" data-status="${st}"><div class="pipe-row" onclick="toggleDetail(this)"><div><div class="nm">${nm}</div><div class="tp">${tp}</div></div><span class="ind">${ind}</span><span class="eb">${eb?eb+'M':'—'}</span><span class="badge badge-${st}">${r[4]}</span><span class="chevron">▾</span></div><div class="detail">${dh}</div></div>`}).join('')}
+function filterBy(s,t){document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.fstage').forEach(x=>x.classList.remove('sel'));if(t)t.classList.add('active');document.querySelectorAll('.detail').forEach(x=>x.classList.remove('show'));document.querySelectorAll('.pipe-row').forEach(x=>x.classList.remove('open'));document.querySelectorAll('#pipelineList .target').forEach(x=>{x.classList.toggle('hidden',s!=='all'&&x.dataset.stage!==s)})}
+function filterByStage(s,el){document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.fstage').forEach(x=>x.classList.remove('sel'));el.classList.add('sel');document.querySelectorAll('#pipelineList .target').forEach(x=>{x.classList.toggle('hidden',x.dataset.stage!==s)})}
+function toggleArchive(){const b=document.getElementById('archiveBody');const t=document.getElementById('archiveToggle');const open=b.classList.toggle('show');t.classList.toggle('open',open);document.getElementById('archiveLabel').textContent=open?'Hide archived companies':'Show archived companies'}
+
+/* ---- Load ---- */
+async function loadDashboard(){
+ const[pipeline,financials,remarks,industries,agenda]=await Promise.all([fetchTab('Pipeline'),fetchTab('Financials'),fetchTab('Remarks'),fetchTab('Industry Screening'),fetchTab('Agenda')]);
+ const companies=parsePipeline(pipeline);
+ const fin=parseFinancials(financials);
+ enrich(companies,fin);
+ const rl={};remarks.slice(1).forEach(r=>{if(r[0]){if(!rl[r[0]])rl[r[0]]=[];rl[r[0]].push({tag:r[1],text:r[2]})}});
+ renderStats(companies);
+ renderFunnel(companies);
+ renderPipeline(companies,fin,rl);
+ renderArchive(companies,fin,rl);
+ renderIndustries(industries);
+ renderAgenda(agenda);
+}
+function parsePipeline(data){
+ return data.slice(1).filter(r=>r[0]).map(r=>({
+  name:r[0],type:r[1],industry:r[2],ebitda:r[3],status:r[4],score:r[5],ownerAge:r[6],kt:r[7],ftes:r[8],dealType:r[9],
+  stage:normStage(r[10],r[4]),deck:hasDeck(r[11]),latestFY:r[12]||'',nextStep:r[13]||'',updated:r[14]||'',owner:r[15]||''
+ }));
+}
+function findBlock(c,fin){return fin.blocks[c.name]||fin.blocks[Object.keys(fin.blocks).find(k=>k.startsWith(c.name.split(' ')[0]))||'']}
+/* Derive front-row figures straight from the Financials tab so ingests update the site with no manual work */
+function enrich(companies,fin){
+ companies.forEach(c=>{
+  let fy='',rev='',eb='',cagr='';
+  const cf=findBlock(c,fin);
+  if(cf){
+   const rv=cf['Revenue (M ISK)'],er=cf['EBITDA (M ISK)'];
+   let li=-1;[rv,er].forEach(m=>{if(m)m.vals.forEach((v,i)=>{if(!isNaN(parseFloat(v))&&i>li)li=i})});
+   if(li>=0)fy=fin.years[li].label;
+   if(rv){for(let i=rv.vals.length-1;i>=0;i--){const n=parseFloat(rv.vals[i]);if(!isNaN(n)){rev=Math.round(n);break}}cagr=rv.cagr||''}
+   if(er){for(let i=er.vals.length-1;i>=0;i--){const n=parseFloat(er.vals[i]);if(!isNaN(n)){eb=Math.round(n);break}}}
+  }
+  c.fy=fy||c.latestFY||'';
+  c.revLatest=rev;
+  c.ebitdaShow=(eb!==''?eb:(c.ebitda||''));
+  c.revCagr=cagr;
+ });
+}
+function parseFinancials(data){
+ if(!data.length)return{years:[],cagrIdx:-1,blocks:{}};
+ const hdr=data[0];const years=[];let cagrIdx=-1;
+ hdr.forEach((h,i)=>{if(/^(19|20)\d{2}$/.test((h||'').trim()))years.push({label:h.trim(),idx:i});else if((h||'').trim().toLowerCase()==='cagr')cagrIdx=i});
+ if(cagrIdx<0&&years.length)cagrIdx=years[years.length-1].idx+1; // gviz sometimes blanks the CAGR header
+ const blocks={};let cc='';
+ data.slice(1).forEach(r=>{if(r[0])cc=r[0];if(r[1]&&cc){if(!blocks[cc])blocks[cc]={};blocks[cc][r[1]]={vals:years.map(y=>r[y.idx]||''),cagr:cagrIdx>=0?(r[cagrIdx]||''):''}}});
+ return{years,cagrIdx,blocks};
+}
+
+/* ---- Renderers ---- */
+function renderStats(companies){
+ const active=companies.filter(c=>!['parked','passed'].includes(c.stage));
+ const inDialogue=active.filter(c=>['contacted','dialogue','nda','loi','dd'].includes(c.stage)).length;
+ const decks=companies.filter(c=>c.deck).length;
+ const fy25=active.filter(c=>c.fy==='2025').length;
+ document.getElementById('statsBar').innerHTML=
+  `<div class="stat"><div class="label">Active funnel</div><div class="value">${active.length}</div><div class="delta">${companies.length-active.length} archived</div></div>`+
+  `<div class="stat"><div class="label">In conversation</div><div class="value">${inDialogue}</div><div class="delta">contacted or beyond</div></div>`+
+  `<div class="stat"><div class="label">2025 statements</div><div class="value">${fy25}<span style="font-size:16px;color:var(--text-muted)">/${active.length}</span></div><div class="delta">latest FY ingested</div></div>`+
+  `<div class="stat"><div class="label">Decks received</div><div class="value">${decks}</div><div class="delta">investor presentations</div></div>`;
+}
+function renderFunnel(companies){
+ const counts={};STAGES.forEach(s=>counts[s.key]=0);
+ companies.forEach(c=>{if(counts[c.stage]!==undefined)counts[c.stage]++});
+ const max=Math.max(1,...Object.values(counts));
+ document.getElementById('funnelBar').innerHTML=STAGES.map(s=>{
+  const n=counts[s.key];
+  return`<div class="fstage${n?'':' zero'}" onclick="filterByStage('${s.key}',this)" title="${s.label}: ${n}">
+   <div class="fcount" style="color:${n?s.color:''}">${n}</div>
+   <div class="fname">${s.label}</div>
+   <div class="fbar"><div style="width:${Math.round(n/max*100)}%;background:${s.color}"></div></div></div>`;
+ }).join('');
+}
+function detailHtml(c,fin,remarks){
+ let dh='';
+ dh+=`<div class="meta-strip">`+
+  [['Owner',c.owner],['Score',c.score],['Owner age',c.ownerAge],['Kt.',c.kt],['FTEs',c.ftes],['Deal type',c.dealType],['Latest FY',c.fy],['Updated',c.updated]]
+  .filter(([k,v])=>v&&v!=='—').map(([k,v])=>`<span class="meta-item">${k} <b>${v}</b></span>`).join('')+
+  (c.deck?`<span class="meta-item" style="color:var(--green-dark)">Investor presentation <b style="color:var(--green-dark)">received ✓</b></span>`:'')+
+  `</div>`;
+ if(c.nextStep)dh+=`<div class="next-step"><b>Next step</b>${c.nextStep}</div>`;
+ const cf=fin.blocks[c.name]||fin.blocks[Object.keys(fin.blocks).find(k=>k.startsWith(c.name.split(' ')[0]))||''];
+ if(cf){
+  const nY=fin.years.length;const grid=`grid-template-columns:1.1fr repeat(${nY},1fr) .8fr`;
+  dh+=`<div class="yr-row hd" style="${grid}"><span></span>${fin.years.map(y=>`<span style="text-align:right">${y.label}</span>`).join('')}<span style="text-align:right">CAGR</span></div>`;
+  Object.entries(cf).forEach(([metric,d])=>{
+   const lastIdx=(()=>{let li=-1;d.vals.forEach((v,i)=>{if(v!=='')li=i});return li})();
+   dh+=`<div class="yr-row" style="${grid}"><span class="metric">${metric}</span>${d.vals.map((v,i)=>`<span class="val${i===lastIdx?' hi':''}">${v||'—'}</span>`).join('')}<span class="val cagr">${d.cagr||'—'}</span></div>`;
+  });
+  const er=cf['EBITDA (M ISK)'];
+  if(er){
+   const pts=er.vals.map((v,i)=>({y:fin.years[i].label,n:parseFloat(v)})).filter(p=>!isNaN(p.n)&&p.n>0);
+   if(pts.length>1){
+    const mx=Math.max(...pts.map(p=>p.n));
+    dh+=`<div class="chart-label">EBITDA trend (M ISK)</div><div class="mini-chart">`;
+    pts.forEach((p,j)=>{const h=Math.max(5,(p.n/mx)*100);dh+=`<div class="col${j===pts.length-1?' lat':''}" style="height:${h}%"><div class="cv">${Math.round(p.n)}</div><div class="cl">'${p.y.slice(2)}</div></div>`});
+    dh+=`</div>`;
+   }
+  }
+ }
+ if(remarks&&remarks.length){
+  dh+=`<div class="remarks">`;
+  remarks.forEach(rm=>{const tl=(rm.tag||'note').toLowerCase();let rc='',tc='rtag-note';if(tl==='signal'){rc='green';tc='rtag-signal'}else if(tl==='thesis'){tc='rtag-thesis'}else if(['risk','gap','below target','too small','fail'].includes(tl)){rc='amber';tc='rtag-risk'}dh+=`<div class="remark ${rc}"><span class="rtag ${tc}">${rm.tag}</span>${rm.text}</div>`});
+  dh+=`</div>`;
+ }
+ if(!dh)dh='<div style="color:var(--text-hint);font-size:13px;padding:12px">No detailed data yet</div>';
+ return dh;
+}
+const DECK_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="#3a9e5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20"/><path d="M4 3v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V3"/><path d="m9 19 3-4 3 4"/><path d="M8 11l3-3 2 2 3-3"/></svg>';
+function rowHtml(c,fin,rl){
+ const si=stageInfo(c.stage);
+ return`<div class="target" data-stage="${c.stage}">
+  <div class="pipe-row" onclick="toggleDetail(this)">
+   <div><div class="nm">${c.name}</div><div class="tp">${c.type||''}</div></div>
+   <span class="ind">${c.industry||''}</span>
+   <span class="rev">${c.revLatest!==''?c.revLatest+'M':'—'}</span>
+   <span class="eb">${c.ebitdaShow!==''?c.ebitdaShow+'M':'—'}</span>
+   <span class="cagrv">${c.revCagr||'—'}</span>
+   <span class="fy ${c.fy==='2025'?'fy-25':'fy-old'}">${c.fy||'—'}</span>
+   <span class="score">${c.score&&c.score!=='—'?c.score:'—'}</span>
+   <span class="badge ${si.cls}">${si.label}</span>
+   <span class="deck" title="Investor presentation received">${c.deck?DECK_SVG:''}</span>
+   <span class="chevron">▾</span>
+  </div>
+  <div class="detail">${detailHtml(c,fin,rl[c.name])}</div></div>`;
+}
+function renderPipeline(companies,fin,rl){
+ const active=companies.filter(c=>!['parked','passed'].includes(c.stage));
+ const sc={};active.forEach(c=>{sc[c.stage]=(sc[c.stage]||0)+1});
+ document.getElementById('filterTabs').innerHTML=
+  `<div class="tab active" onclick="filterBy('all',this)">All<span class="cnt">${active.length}</span></div>`+
+  STAGES.filter(s=>sc[s.key]).map(s=>`<div class="tab" onclick="filterBy('${s.key}',this)">${s.label}<span class="cnt">${sc[s.key]}</span></div>`).join('');
+ document.getElementById('pipelineList').innerHTML=active.length?active.map(c=>rowHtml(c,fin,rl)).join(''):'<div class="ag-empty">No active companies</div>';
+}
+function renderArchive(companies,fin,rl){
+ const arch=companies.filter(c=>['parked','passed'].includes(c.stage));
+ document.getElementById('archiveLabel').textContent=`Show archived companies (${arch.length})`;
+ document.getElementById('archiveBody').innerHTML=arch.length?
+  `<div class="pipe-hdr"><span>Company</span><span>Industry</span><span>Revenue</span><span>EBITDA</span><span>CAGR</span><span>FY</span><span>Score</span><span>Stage</span><span></span><span></span></div>`+arch.map(c=>rowHtml(c,fin,rl)).join('')
+  :'<div class="ag-empty">Archive is empty</div>';
+}
 function renderIndustries(data){const rows=data.slice(1).filter(r=>r[0]);document.getElementById('industryGrid').innerHTML=rows.map(r=>{const tot=parseInt(r[9])||0;const pct=Math.round((tot/40)*100);return`<div class="ind-card"><div class="name">${r[0]}</div><div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div><div class="score-text"><span>${r[10]||''}</span><span>${tot}/40</span></div></div>`}).join('')}
+
+/* ---- Agenda ---- */
+function parseDate(s){const m=(s||'').match(/(\d{4})-(\d{1,2})-(\d{1,2})/);if(m)return new Date(+m[1],+m[2]-1,+m[3]);const d=new Date(s);return isNaN(d)?null:d}
+function fmtDate(d){return d?d.toLocaleDateString('en-GB',{day:'numeric',month:'short'}):'—'}
+function fmtDow(d){return d?d.toLocaleDateString('en-GB',{weekday:'short'}):''}
+function agItem(it,today){
+ const overdue=it.date&&it.date<today&&!it.done;
+ const chips=`<span class="ag-chip ${it.kind==='meeting'?'chip-meeting':'chip-task'}">${it.kind==='meeting'?'Meeting':'Task'}</span>${overdue?'<span class="ag-chip chip-overdue">Overdue</span>':''}`;
+ return`<div class="ag-item"${it.done?' style="opacity:.55"':''}>
+  <div class="ag-date">${fmtDate(it.date)}<span class="dow">${fmtDow(it.date)}</span></div>
+  <div><div class="ag-title">${it.title}</div><div class="ag-sub">${[it.who,it.notes].filter(Boolean).join(' · ')}</div></div>
+  <div class="ag-right">${chips}</div></div>`;
+}
+function renderAgenda(data){
+ const today=new Date();today.setHours(0,0,0,0);
+ const items=data.slice(1).filter(r=>r[1]).map(r=>({
+  kind:(r[0]||'').toLowerCase().includes('meet')?'meeting':'task',
+  title:r[1],who:r[2]||'',date:parseDate(r[3]),status:(r[4]||'').toLowerCase(),notes:r[5]||'',
+  done:['done','complete','completed','lokið'].includes((r[4]||'').toLowerCase())
+ }));
+ const meetings=items.filter(i=>i.kind==='meeting'&&!i.done).sort((a,b)=>(a.date||9e15)-(b.date||9e15));
+ const tasks=items.filter(i=>i.kind==='task'&&!i.done).sort((a,b)=>(a.date||9e15)-(b.date||9e15));
+ const done=items.filter(i=>i.done).slice(-5).reverse();
+ const overdue=items.filter(i=>!i.done&&i.date&&i.date<today).length;
+ const next=meetings.find(m=>m.date&&m.date>=today);
+ const week=new Date(today);week.setDate(week.getDate()+7);
+ const thisWeek=items.filter(i=>!i.done&&i.date&&i.date>=today&&i.date<week).length;
+ document.getElementById('agStats').innerHTML=
+  `<div class="stat"><div class="label">Next meeting</div><div class="value" style="font-size:20px">${next?fmtDate(next.date):'—'}</div><div class="delta">${next?next.who||next.title:'nothing scheduled'}</div></div>`+
+  `<div class="stat"><div class="label">This week</div><div class="value">${thisWeek}</div><div class="delta">items due in 7 days</div></div>`+
+  `<div class="stat"><div class="label">Open tasks</div><div class="value">${tasks.length}</div><div class="delta">to do</div></div>`+
+  `<div class="stat"><div class="label">Overdue</div><div class="value"${overdue?' style="color:var(--red)"':''}>${overdue}</div><div class="delta">need attention</div></div>`;
+ document.getElementById('agMeetings').innerHTML=meetings.length?meetings.map(i=>agItem(i,today)).join(''):'<div class="ag-empty">No upcoming meetings — add rows to the Agenda tab in the sheet</div>';
+ document.getElementById('agTasks').innerHTML=tasks.length?tasks.map(i=>agItem(i,today)).join(''):'<div class="ag-empty">No open tasks</div>';
+ document.getElementById('agDone').innerHTML=done.length?done.map(i=>agItem(i,today)).join(''):'<div class="ag-empty">Nothing completed yet — mark Agenda rows as Done</div>';
+}
 </script>
 <script>!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();</script>
 </body>
